@@ -1,0 +1,225 @@
+body{
+    font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(53, 61, 70);
+    color:  rgb(210, 210, 210);
+}
+.divHeaderContainer{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px 0px;
+}
+#progressBar{
+    border-radius: 7px;
+    background-color: #60935D;
+    padding: 1px;
+    width: 0%;
+    max-height: 20px;
+    text-align: center;
+}
+#txtInputSearch{
+    margin: 5px;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: rgb(210, 210, 210);
+    background-color: rgb(44, 49, 59);
+    border: solid 2px rgb(44, 49, 59);
+    border-radius: 5px;
+    height: 50px;
+    width: 350px;
+}
+#txtInputSearch:focus{
+    border-radius: 0px;
+    outline: none;
+    background-color: rgb(53, 61, 70);
+    border-top: solid 2px rgb(53, 61, 70);
+    border-right: solid 2px rgb(53, 61, 70);
+    border-left: solid 2px rgb(53, 61, 70);
+    border-bottom: solid 2px rgb(210, 210, 210);
+}
+.warningMessage{
+    color: rgb(255, 88, 88);
+}
+.btnHead{
+    margin: 10px;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: rgb(210, 210, 210);
+    background-color: rgb(53, 61, 70);
+    border: solid 2px rgb(210, 210, 210);
+    border-radius: 0px;
+    height: 50px;
+    width: 170px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.btnHead:hover{
+    background-color: rgb(210, 210, 210);
+    color: rgb(53, 61, 70);
+    border-color:rgb(210, 210, 210);
+    border-radius: 0px;
+}
+.btnHead:focus{
+    border-radius: 0px;
+    outline: none;
+}
+.btnHead:active{
+    background-color:rgb(190, 190, 190);
+}
+.divBodyContainer1{
+    width: 100%;
+}
+.divBodyContainer2{
+    width: 100%;
+}
+.popup{
+    cursor: text;
+    background-color: rgb(30, 90, 74);
+    color: rgb(210, 210, 210);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    display: inline-block;
+    border-bottom: 1px  black;
+    z-index: 1;
+}
+
+.selectHead{
+    margin: 10px;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: rgb(210, 210, 210);
+    background-color: rgb(53, 61, 70);
+    border: solid 2px rgb(210, 210, 210);
+    border-radius: 0px;
+    height: 50px;
+    width: 170px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+}
+
+table {
+    border: solid 1px rgb(53, 61, 70); 
+    border-collapse:collapse;
+    width: 98%;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.tableMoviesRecommendations{
+    width: 901px;
+}
+th{
+    font-size: 30px;
+    height: 1px;
+    color:#aa9f7f;
+    width: 100px;
+}
+td{
+    text-align: center;
+    overflow-wrap: break-word;
+    height: 60px;
+    width: 100px;
+    box-sizing: border-box;
+}
+.titleTD{
+    max-width: 200px;
+}
+.genreTD{
+    width: 400px;
+}
+tr:nth-child(even) {background-color: rgb(44, 49, 59);}
+tr:nth-child(even) .menuBtn {
+    color: rgb(210, 210, 210);
+    background-color: rgb(44, 49, 59);
+    border: solid 2px rgb(44, 49, 59);
+    border-radius: 0px;
+
+    color: rgb(210, 210, 210);
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+tr:nth-child(even) .menuBtn {
+    color: rgb(210, 210, 210);
+    background-color: rgb(44, 49, 59);
+    border: solid 2px rgb(44, 49, 59);
+    border-radius: 0px;
+
+    color: rgb(210, 210, 210);
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+tr:nth-child(even) .menuBtn:hover {
+    background-color: rgb(210, 210, 210);
+    color: rgb(44, 49, 59);
+    border-color:rgb(210, 210, 210);
+}
+.checked{
+    color: orange;
+    cursor:pointer;
+}
+.unchecked{
+    color: gray;
+    cursor:pointer;
+}
+
+.divPaginationContainer{
+    margin-left: 20px;
+    width: 588px;
+    padding: 20px 0px;
+    overflow: auto;
+}
+.btnNext{
+    float:right;
+    margin: 10px;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: rgb(210, 210, 210);
+    background-color: rgb(53, 61, 70);
+    border: solid 2px rgb(53, 61, 70);
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+    box-sizing: border-box;
+}
+.btnNext:hover{
+    border-color:rgb(210, 210, 210);
+    border-radius: 0px;
+}
+.btnNext:focus{
+    border-radius: 0px;
+    outline: none;
+}
+.btnPrevious{
+    float: left;
+    margin: 10px;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: rgb(210, 210, 210);
+    background-color: rgb(53, 61, 70);
+    border: solid 2px rgb(53, 61, 70);;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+    box-sizing: border-box;
+}
+.btnPrevious:hover{
+    border-color:rgb(210, 210, 210);
+    border-radius: 0px;
+}
+.btnPrevious:focus{
+    border-radius: 0px;
+    outline: none;
+}
+#lblContainer{
+    
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 25px 0px;
+}

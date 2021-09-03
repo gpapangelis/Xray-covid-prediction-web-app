@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: fastapi
+      app: myapi
+  template:
+    metadata:
+      labels:
+        component: fastapi
+        app: myapi
+    spec:
+      containers:
+        - name: fastapi
+          image: 'giorgospls/jenkinsfastapi:latest'
+          ports:
+            - containerPort: 6000
+          envFrom:
+            - configMapRef:
+                name: fastapi-config
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+    <script src="main.js"></script>
+    <script src="loginRegister.js"></script>
+    <script src="welcomeTab.js"></script>
+    <script src="loadWelcomeTabAdmin.js"></script>
+    <script src="tabs.js"></script>
+    <script src="loader.js"></script>
+    <script src="utils.js"></script>
+
+    <div id="formsContainer">
+        <div id="loginContainer" class="signContainer">
+            <p id="txtMessageLogin" class="txtMessageSign"></p>
+            <form class="signForm" id="loginForm" action="someIP" method="POST">
+                <h1 id="headerTitleLogin" class="signHeader">Login</h1>
+                <input type="text" id="txtInputEmailLogin" placeholder="example@example.com" class="txtInputSign txtInputLogin">
+                <input type="password" id="txtInputPasswordLogin" placeholder="Password..." class="txtInputSign txtInputLogin">
+                <input type="submit" id="btnLogin" value="Login" class="btnSign">
+            </form>
+        </div>
+        <div id="registerContainer" class="signContainer">
+            <p id="txtMessageRegister" class="txtMessageSign"></p>
+            <form class="signForm" id="registerForm" action="someIP" method="POST">
+                <h1 id="headerTitleRegister" class="signHeader">Register</h1>
+                <input type="text" id="txtInputNameRegister" placeholder="Name..." class="txtInputSign txtInputRegister">
+                <input type="text" id="txtInputEmailRegister" placeholder="example@example.com" class="txtInputSign txtInputRegister">
+                <input type="password" id="txtInputPasswordRegister" placeholder="Password..." class="txtInputSign txtInputRegister">
+                <input type="password" id="txtInputConfirmPasswordRegister" placeholder="Confirm Password..." class="txtInputSign txtInputRegister">
+                <input type="submit" id="btnRegister" value="Register" class="btnSign">
+            </form>
+        </div>
+    </div>
+</body>

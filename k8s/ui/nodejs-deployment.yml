@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: nodejs
+  template:
+    metadata:
+      labels:
+        component: nodejs
+    spec:
+      containers:
+        - name: nodejs
+          image: 'giorgospls/jenkinsnodejs:latest'
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com

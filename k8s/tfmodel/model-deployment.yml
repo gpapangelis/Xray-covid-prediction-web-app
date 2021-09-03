@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: model
+  template:
+    metadata:
+      labels:
+        component: model
+    spec:
+      containers:
+        - name: model
+          image: 'giorgospls/backendmodel:latest'
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: fastapi-config
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com

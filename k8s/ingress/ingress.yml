@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-service
+spec:
+  rules:
+  - host: "kubernetes.cloudns.ph"
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: fastapi-clip
+            port:
+              number: 6000
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nodejs-clip
+            port:
+              number: 80
+  tls:
+    - hosts:
+      - kubernetes.cloudns.ph
+      secretName: tls-secret

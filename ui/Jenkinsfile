@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+              // Get some code from a GitHub repository
+                git branch: 'main', url: 'https://github.com/gpapangelis/nodejs-ui.git' 
+            }
+        }
+
+        stage('docker build and push') {
+            environment {
+                DOCKERHUB_CREDENTIALS = credentials('giorgospls-dockerhub')
+                DOCKER_USER = 'giorgospls'
+                DOCKER_PREFIX = 'giorgospls/jenkinsnodejs'
+            }
+
+            steps {
+                sh '''
+                    HEAD_COMMIT=$(git rev-parse --short HEAD)
+                    TAG=$HEAD_COMMIT-$BUILD_ID
+                    docker build --rm -t $DOCKER_PREFIX:$TAG -t $DOCKER_PREFIX:latest -f Dockerfile .
+                '''
+
+
+                sh '''
+                    echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
+                    docker push giorgospls/jenkinsnodejs --all-tags
+                '''
+            }
+
+        }
+
+        stage('deploy to k8s') {
+            steps {
+                sh '''
+                    kubectl config use-context microk8s
+                    kubectl delete deploy nodejs-deployment
+                    ls *.yml | while read fl ; do kubectl apply -f $fl; done
+                '''
+            }
+        }
+    }
+}
