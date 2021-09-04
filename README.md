@@ -63,4 +63,4 @@ k apply -f k8s/ingress/ingress.yml
 
 ## Application overview
 
-![Image of Yaktocat](assets/img/fastapi-lab.png)
+![Image of Yaktocat](assets/app.png)
