@@ -5,7 +5,6 @@
 kubectl apply -f k8s/db/postgres-pvc.yml
 ```
 ## Configmaps
-### create fastapi configmap
 ```bash
 kubectl create configmap fastapi-config --from-env-file=k8s/api/fastapi.env
 ```
