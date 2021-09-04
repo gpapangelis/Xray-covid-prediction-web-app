@@ -74,6 +74,6 @@ URL: https://gpapangel.cloudns.cl/
 	- password: admin
 
 
-## Application overview
+# Application overview
 
 ![Image of Yaktocat](assets/app.png)
