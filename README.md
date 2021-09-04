@@ -1,8 +1,3 @@
-# Run the project locally
-```bash
-docker-compose up --build
-```
-
 # Deploy the project to a kubernetes cluster
 
 * connect to cluster
