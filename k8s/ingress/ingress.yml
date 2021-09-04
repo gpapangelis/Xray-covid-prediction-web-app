@@ -4,7 +4,7 @@ metadata:
   name: ingress-service
 spec:
   rules:
-  - host: "kubernetes.cloudns.ph"
+  - host: "gpapangel.cloudns.cl"
     http:
       paths:
       - path: /api
@@ -23,5 +23,5 @@ spec:
               number: 80
   tls:
     - hosts:
-      - kubernetes.cloudns.ph
+      - gpapangel.cloudns.cl
       secretName: tls-secret
