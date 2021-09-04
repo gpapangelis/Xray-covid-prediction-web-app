@@ -1,18 +1,16 @@
 # Deploy the project to a kubernetes cluster
 
-* connect to cluster
-
-## persistent volumes
+## Persistent volumes
 ```bash
 kubectl apply -f k8s/db/postgres-pvc.yml
 ```
-## configmaps
+## Configmaps
 ### create fastapi configmap
 ```bash
 kubectl create configmap fastapi-config --from-env-file=k8s/api/fastapi.env
 ```
 
-## deployments
+## Deployments
 ```bash
 kubectl apply -f k8s/db/postgres-deployment.yml
 kubectl apply -f k8s/api/fastapi-deployment.yml
@@ -21,7 +19,7 @@ kubectl apply -f k8s/tfmodel/model-deployment.yml
 kubectl apply -f k8s/mailhog/mailhog-deployment.yml
 ```
 
-## services
+## Services
 ```bash
 kubectl apply -f k8s/db/postgres-clip.yml
 kubectl apply -f k8s/api/fastapi-clip.yml
@@ -30,7 +28,7 @@ kubectl apply -f k8s/tfmodel/model-clip.yml
 kubectl apply -f k8s/mailhog/mailhog-clip.yml
 
 ```
-## secrets
+## Secrets
 * pg secret
 
 ```bash
@@ -47,7 +45,7 @@ kubectl create secret generic tls-secret \
  --from-file=ca.crt=ca_bundle.crt
 ```
 
-## ingress
+## Ingress
 
 * allow routing. Get the name of your network interface, e.g. eth0 and run
 ```bash
