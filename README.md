@@ -57,6 +57,22 @@ sudo ufw default allow routed
 k apply -f k8s/ingress/ingress.yml
 ```
 
+# Application URL & Test accounts
+
+URL: https://gpapangel.cloudns.cl/
+
+
+## User test account:
+
+	- email: asd@asd.asd
+	- password: asd
+
+
+## Admin test account:
+
+	- email: admin@admin.admin
+	- password: admin
+
 
 ## Application overview
 
