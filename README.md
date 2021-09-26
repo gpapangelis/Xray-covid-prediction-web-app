@@ -59,7 +59,7 @@ k apply -f k8s/ingress/ingress.yml
 
 # Application URL & Test accounts
 
-URL: https://gpapangel.cloudns.cl/
+~~URL: https://gpapangel.cloudns.cl/~~ (cluster temporary down)
 
 
 ## User test account:
